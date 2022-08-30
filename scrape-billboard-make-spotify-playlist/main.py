@@ -3,10 +3,11 @@ import lxml
 import requests
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import os
 
 
-clientid = "d2056b05ba8946d3b34a9348d638a1b4"
-clientsecret = "b3a0588ea34249baa807d93aa13976dc"
+clientid = os.environ.get("SPOTIFY_CLIENT_ID")
+clientsecret = os.environ.get("SPOTIFY_CLIENT_SECRET")
 redirecturi = "https://example.com/callback"
 
 # input date in form YYYY-MM-DD
